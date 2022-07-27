@@ -5,7 +5,9 @@ module SlackSignIn
     private
 
     def client
-      puts '=======324=234=234=23=423=4=2342=34', callback_url
+      puts '=======324=234=234=23=423=4=2342=34'
+      puts callback_url
+      puts '=======324=234=234=23=423=4=2342=34'
       @_client ||= SlackSignIn.client.new(
         SlackSignIn.client_id,
         SlackSignIn.client_secret,
@@ -16,7 +18,7 @@ module SlackSignIn
     end
 
     def callback_url
-      host_with_port + '/slack_sign_in/callback'
+      host_with_port
     end
   end
 end
