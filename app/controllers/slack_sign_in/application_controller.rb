@@ -14,5 +14,9 @@ module SlackSignIn
         redirect_uri: callback_url,
       )
     end
+
+    def callback_url
+      host_with_port + '/slack_sign_in/callback'
+    end
   end
 end
